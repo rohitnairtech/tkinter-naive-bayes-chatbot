@@ -70,6 +70,8 @@ def response(user_response):
     for insult in Abuse:
         if(insult in user_response):
             return 'Please don\'t insult me'
+    if('love' in user_response):
+        return 'I love you too'
     robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
@@ -90,6 +92,8 @@ def responseone(user_response):
     for insult in Abuse:
         if(insult in user_response):
             return 'Please don\'t insult me'
+    if('love' in user_response):
+        return 'I love you too'
     robo_response=''
     sent_tokensone.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
