@@ -1,1 +1,1 @@
-# naive bayes base chatbot built on Tkinter
+# naive bayes based chatbot built on Tkinter
