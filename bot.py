@@ -135,7 +135,7 @@ def responseone(user_response):
         if(insult in user_response):
             return 'Please don\'t insult me'
     if('love' in user_response):
-        return 'What we call love is basically a chemical reaction happening inside our head'
+        return 'What we call love is nothing but a chemical reaction happening inside our head'
     elif('time' in user_response):
         now = datetime.now()
         current_time = now.strftime("%H:%M")
@@ -156,6 +156,8 @@ def responseone(user_response):
         return 'Nice'
     elif('sweet' in user_response):
         return 'Neat'
+    elif('made' in user_response or 'create' in user_response or 'creator' in user_response or 'develop' in user_response):
+        return 'ChatBotX Developers\n1.Rahul Sharma\n2.Samyak Pawar\n3.Ashray Parmar\n3.Shubhankar Pawar'
     robo_response=''
     sent_tokensone.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
