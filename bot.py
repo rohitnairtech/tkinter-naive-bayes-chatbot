@@ -91,7 +91,7 @@ def response(user_response):
         if(insult in user_response):
             return 'Please don\'t insult me'
     if('love' in user_response):
-        return 'I love you too'
+        return 'What we call love is nothing but a chemical reaction happening inside our head'
     elif('time' in user_response):
         now = datetime.now()
         current_time = now.strftime("%H:%M")
@@ -100,6 +100,18 @@ def response(user_response):
         return 'My name is ChatBotX'
     elif('age' in user_response):
         return 'I\'m 5184000000 milliseconds old (2 months :D )'
+    elif('life' in user_response):
+        return 'Life is a beautiful game'
+    elif('death' in user_response):
+        return 'I\'m not afraid of death'
+    elif('like' in user_response):
+        return 'Chatting and running (Since programs \'run\' :p)'
+    elif('yeah' in user_response):
+        return 'Cool'
+    elif('yes' in user_response):
+        return 'Nice'
+    elif('sweet' in user_response):
+        return 'Neat'
     robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
@@ -121,7 +133,7 @@ def responseone(user_response):
         if(insult in user_response):
             return 'Please don\'t insult me'
     if('love' in user_response):
-        return 'I love you too'
+        return 'What we call love is basically a chemical reaction happening inside our head'
     elif('time' in user_response):
         now = datetime.now()
         current_time = now.strftime("%H:%M")
@@ -130,6 +142,18 @@ def responseone(user_response):
         return 'My name is ChatBotX'
     elif('age' in user_response):
         return 'I\'m 5184000000 milliseconds old (2 months :D )'
+    elif('life' in user_response):
+        return 'Life is a beautiful game'
+    elif('death' in user_response):
+        return 'I\'m not afraid of death'
+    elif('like' in user_response):
+        return 'Chatting and running (Since programs \'run\' :p)'
+    elif('yeah' in user_response):
+        return 'Cool'
+    elif('yes' in user_response):
+        return 'Nice'
+    elif('sweet' in user_response):
+        return 'Neat'
     robo_response=''
     sent_tokensone.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
