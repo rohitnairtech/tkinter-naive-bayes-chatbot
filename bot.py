@@ -4,6 +4,9 @@ warnings.filterwarnings("ignore")
 import numpy as np
 import random
 import string
+from datetime import datetime
+
+dt = datetime(2020, 1, 1)
 
 f=open('nlp python answer finals.txt','r',errors = 'ignore')
 m=open('modules pythons.txt','r',errors = 'ignore')
@@ -66,12 +69,37 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
+def additionalResp(user_response):
+    for insult in Abuse:
+        if(insult in user_response):
+            return 'Please don\'t insult me'
+    if('love' in user_response):
+        return 'I love you too'
+    elif('time' in user_response):
+        now = datetime.now()
+        current_time = now.strftime("%H:%M")
+        return 'The current time is: '+current_time
+    elif('name' in user_response):
+        return 'My name is ChatBotX'
+    elif('age' in user_response):
+        return 'I\'m 5184000000 milliseconds old (2 months :D )'
+    else:
+        return False
+
 def response(user_response):
     for insult in Abuse:
         if(insult in user_response):
             return 'Please don\'t insult me'
     if('love' in user_response):
         return 'I love you too'
+    elif('time' in user_response):
+        now = datetime.now()
+        current_time = now.strftime("%H:%M")
+        return 'The current time is: '+current_time
+    elif('name' in user_response):
+        return 'My name is ChatBotX'
+    elif('age' in user_response):
+        return 'I\'m 5184000000 milliseconds old (2 months :D )'
     robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
@@ -94,6 +122,14 @@ def responseone(user_response):
             return 'Please don\'t insult me'
     if('love' in user_response):
         return 'I love you too'
+    elif('time' in user_response):
+        now = datetime.now()
+        current_time = now.strftime("%H:%M")
+        return 'The current time is: '+current_time
+    elif('name' in user_response):
+        return 'My name is ChatBotX'
+    elif('age' in user_response):
+        return 'I\'m 5184000000 milliseconds old (2 months :D )'
     robo_response=''
     sent_tokensone.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
