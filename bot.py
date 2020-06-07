@@ -112,6 +112,8 @@ def response(user_response):
         return 'Nice'
     elif('sweet' in user_response):
         return 'Neat'
+    elif('made' in user_response or 'create' in user_response or 'creator' in user_response or 'develop' in user_response):
+        return 'ChatBotX Developers\n1.Rahul Sharma\n2.Samyak Pawar\n3.Ashray Parmar\n3.Shubhankar Pawar'
     robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
